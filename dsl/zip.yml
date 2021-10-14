@@ -1,0 +1,15 @@
+ref: pack_zip
+version: 1.0.0
+inputParameters:
+  - name: zip压缩解压命令
+    ref: cmd
+    type: STRING
+    value: ''
+    description: zip压缩解压命令
+spec:
+  image: jianmudev/jianmu-runner-zip:1.0.0
+  entrypoint:
+    - /bin/sh
+    - "-c"
+  cmd:
+    - ${JIANMU_CMD}
