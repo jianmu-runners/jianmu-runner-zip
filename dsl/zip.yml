@@ -5,7 +5,6 @@ inputParameters:
     ref: cmd
     type: STRING
     required: true
-    value:
     description: zip压缩解压命令
 spec:
   image: jianmudev/jianmu-runner-zip:1.0.0
