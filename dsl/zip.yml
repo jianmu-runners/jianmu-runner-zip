@@ -7,7 +7,7 @@ inputParameters:
     required: true
     description: zip压缩解压命令
 spec:
-  image: jianmudev/jianmu-runner-zip:1.0.0
+  image: jianmurunner/pack_zip:1.0.0
   entrypoint:
     - /bin/sh
     - "-c"

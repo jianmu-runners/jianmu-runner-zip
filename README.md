@@ -3,23 +3,26 @@
 #### 介绍
 用zip命令解压缩文件
 
+#### 发布到建木Hub
+通过建木CI执行[pack_zip.yml](https://gitee.com/jianmu-runners/jianmu-runner-list/blob/master/release_dsl/pack_zip.yml) ，可发布到建木Hub
+
 #### 输入参数
 ```
-JIANMU_CMD: zip压缩解压命令
+cmd: zip压缩解压命令
 ```
 
 #### 构建docker镜像
 ```
 # 创建docker镜像
-docker build -f dockerfile/Dockerfile -t jianmudev/jianmu-runner-zip:${version}
+docker build -f dockerfile/Dockerfile -t jianmurunner/pack_zip:${version}
 
 # 上传docker镜像
-docker push jianmudev/jianmu-runner-zip:${version}
+docker push jianmurunner/pack_zip:${version}
 ```
 
 #### 用法
 ```
 docker run --rm \
   -e JIANMU_CMD=xxx \
-  jianmudev/jianmu-runner-zip:${version}
+  jianmurunner/pack_zip:${version}
 ```
